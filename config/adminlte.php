@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Lancer</b> CRM',
+    'logo' => '<b>Real</b> ESTATE',
     'logo_img' => false,
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -305,6 +305,26 @@ return [
                     'url'  => 'projects/create',
                     'icon'    => 'fas fa-fw fa-plus-square',
                     'can' => 'project_create',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'property',
+            'url'     => 'property/*',
+            'icon'    => 'fas fa-fw fa-home-diagram',
+            'can' => 'property_access',
+            'submenu' => [
+                [
+                    'text' => 'all_property',
+                    'url'  => 'property',
+                    'icon'    => 'fas fa-fw fa-list',
+                    'can' => 'property_show',
+                ],
+                [
+                    'text' => 'add_property',
+                    'url'  => 'property/create',
+                    'icon'    => 'fas fa-fw fa-plus-square',
+                    'can' => 'property_create',
                 ],
             ],
         ],

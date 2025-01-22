@@ -63,6 +63,12 @@ class PermissionSeeder extends Seeder
             'project_delete',
             'project_access',
 
+            'property_create',
+            'property_edit',
+            'property_show',
+            'property_delete',
+            'property_access',
+
             'payment_create',
             'payment_edit',
             'payment_show',
@@ -111,6 +117,12 @@ class PermissionSeeder extends Seeder
             'project_delete',
             'project_access',
 
+            'property_create',
+            'property_edit',
+            'property_show',
+            'property_delete',
+            'property_access',
+
             'payment_create',
             'payment_edit',
             'payment_show',
@@ -147,6 +159,11 @@ class PermissionSeeder extends Seeder
             'project_edit',
             'project_show',
             'project_access',
+
+            'property_create',
+            'property_edit',
+            'property_show',
+            'property_access',
 
             'payment_create',
             'payment_edit',

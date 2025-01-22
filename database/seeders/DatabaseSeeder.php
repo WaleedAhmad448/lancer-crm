@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call(BudgetRangeSeeder::class);
         $this->call(PaymentModeSeeder::class);
         $this->call(ProjectSeeder::class);
+        $this->call(PropertySeeder::class);
+
         $this->call(ExpenseCategorySeeder::class);
     }
 }

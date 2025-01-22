@@ -10,6 +10,7 @@ use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\FollowupsController;
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\UserAccountController;
@@ -90,6 +91,16 @@ Route::group(['prefix' => '/projects', 'middleware' => ['auth', 'can:project_acc
     Route::post('/{id}/update', [ProjectsController::class, 'update'])->name('projects.update')->middleware('can:project_edit');
     Route::get('/{id}/show', [ProjectsController::class, 'show'])->name('projects.show')->middleware('can:project_show');
     Route::post('/{id}/destroy', [ProjectsController::class, 'destroy'])->name('projects.destroy')->middleware('can:project_delete');
+});
+// properties routes
+Route::group(['prefix' => '/property', 'middleware' => ['auth', 'can:property_access']], function () {
+    Route::get('/', [PropertyController::class, 'index'])->name('property.index');
+    Route::get('/create', [PropertyController::class, 'create'])->name('property.create')->middleware('can:property_create');
+    Route::post('/store', [PropertyController::class, 'store'])->name('property.store')->middleware('can:property_create');
+    Route::get('/{id}/edit', [PropertyController::class, 'edit'])->name('property.edit')->middleware('can:property_edit');
+    Route::post('/{id}/update', [PropertyController::class, 'update'])->name('property.update')->middleware('can:property_edit');
+    Route::get('/{id}/show', [PropertyController::class, 'show'])->name('property.show')->middleware('can:property_show');
+    Route::post('/{id}/destroy', [PropertyController::class, 'destroy'])->name('property.destroy')->middleware('can:property_delete');
 });
 
 // dues routes

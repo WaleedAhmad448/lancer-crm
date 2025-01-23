@@ -16,8 +16,24 @@ class PropertySeeder extends Seeder
     {
         Property::insert([
             [
-                'name' => 'Piramal Vaikunth',
-                'details' => 'Balkum | 32 acres | 12 towers',
+                'title' => 'Primary',
+                'description' => 'This is a primary property',
+                'price' => 1000000,
+                'address' => '123 Main St',
+                'city' => 'New York',
+                'type' => 'NY',
+                'address' => 'sanaa',
+                'latitude' => '15302351',
+                'longitude' => '4400525',
+                'status' => 'in:sale,rent,sold',
+                'date' => 12/12/2024,
+                'images' => 'json',
+                'user_id' => 1,
+                'bedrooms' => 3,
+                'bathrooms' => 2,
+                'area' => 1500,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ]);
 

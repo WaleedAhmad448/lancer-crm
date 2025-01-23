@@ -42,12 +42,12 @@
                         <span class="pl-1 font-weight-bolder">{{ $property->id }}</span>
                     </li>
                     <li class="list-group-item">
-                        <span>Name</span>:
-                        <span class="pl-1 font-weight-bolder">{{ $property->name }}</span>
+                        <span>Title</span>:
+                        <span class="pl-1 font-weight-bolder">{{ $property->title }}</span>
                     </li>
                     <li class="list-group-item">
-                        <span>Details</span>:
-                        <span class="pl-1 font-weight-bolder">{{ $property->details }}</span>
+                        <span>Date</span>:
+                        <span class="pl-1 font-weight-bolder">{{ $property->date }}</span>
                     </li>
                 </ul>
 
@@ -56,8 +56,8 @@
     </div>
 
     {{-- Required for delete action --}}
-    <input type="hidden" id="deleteUrl{{ $property->id }}" value="{{ route('propertys.destroy', ['id' => $property->id]) }}">
-    <input type="hidden" id="closedRedirectUrl" value="{{ route('propertys.index') }}">
+    <input type="hidden" id="deleteUrl{{ $property->id }}" value="{{ route('property.destroy', ['id' => $property->id]) }}">
+    <input type="hidden" id="closedRedirectUrl" value="{{ route('property.index') }}">
     <input type="hidden" id="deletedBtnText" value="Yes, delete it!">
     <input type="hidden" id="deletedTitle" value="Deleted!">
     <input type="hidden" id="deletedMsg" value="The selected property was successfully deleted.">

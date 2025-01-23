@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Lancer CRM',
+    'title' => 'Real Estate',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -311,7 +311,7 @@ return [
         [
             'text'    => 'property',
             'url'     => 'property/*',
-            'icon'    => 'fas fa-fw fa-home-diagram',
+            'icon'    => 'fas fa-fw fa-receipt',
             'can' => 'property_access',
             'submenu' => [
                 [

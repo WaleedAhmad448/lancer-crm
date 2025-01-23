@@ -24,8 +24,11 @@
                 <thead class="thead-dark">
                     <tr>
                         <th class="text-uppercase" scope="col">#</th>
-                        <th class="text-uppercase" scope="col">Name</th>
-                        <th class="text-uppercase" scope="col">Details</th>
+                        <th class="text-uppercase" scope="col">Title</th>
+                        <th class="text-uppercase" scope="col">Date</th>
+                        <th class="text-uppercase" scope="col">Address</th>
+                        <th class="text-uppercase" scope="col">Price</th>
+                        <th class="text-uppercase" scope="col">City</th>
                         <th class="text-uppercase" scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -33,8 +36,11 @@
                     @foreach ($property as $property)
                     <tr>
                         <td>{{ $property->id }}</td>
-                        <td>{{ $property->name }}</td>
-                        <td>{{ $property->details }}</td>
+                        <td>{{ $property->titl }}</td>
+                        <td>{{ $property->date }}</td>
+                        <td>{{ $property->address }}</td>
+                        <td>{{ $property->price }}</td>
+                        <td>{{ $property->city }}</td>
                         <td>
                             <div class="dropdown">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"

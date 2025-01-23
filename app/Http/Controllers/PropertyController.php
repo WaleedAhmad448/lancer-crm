@@ -12,7 +12,7 @@ class PropertyController extends Controller
 {
     public function index()
     {
-        // $properties = Property::all();
+        $property = Property::all();
         // return PropertyResource::collection($properties);
         $property = Property::paginate(5);
 
@@ -21,8 +21,9 @@ class PropertyController extends Controller
 
     public function create()
     {
-        // يعيد عرض النموذج لإضافة عقار جديد
-    }
+        {
+            return view('property.create');
+        }    }
 
     public function store(Request $request)
     {
@@ -52,8 +53,11 @@ class PropertyController extends Controller
 
     public function show($id)
     {
-        $property = Property::findOrFail($id);
-        return new PropertyResource($property);
+        // $property = Property::findOrFail($id);
+        // return new PropertyResource($property);
+        $property = Property::findorfail($id);
+
+        return view('property.show', compact('property'));
     }
 
     public function edit($id)

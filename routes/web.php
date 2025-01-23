@@ -102,6 +102,8 @@ Route::group(['prefix' => '/property', 'middleware' => ['auth', 'can:property_ac
     Route::get('/{id}/show', [PropertyController::class, 'show'])->name('property.show')->middleware('can:property_show');
     Route::post('/{id}/destroy', [PropertyController::class, 'destroy'])->name('property.destroy')->middleware('can:property_delete');
 });
+// Route::resource('property', PropertyController::class);
+
 
 // dues routes
 Route::group(['prefix' => '/dues', 'middleware' => ['auth', 'can:payment_access']], function () {
